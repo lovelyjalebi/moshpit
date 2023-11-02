@@ -1,0 +1,119 @@
+:root{
+    --lightJalebi: #f0a080;
+    --beige: #ffeedb;
+    --jalebi: #f14f0f;
+    --darkBlue: #12130f;
+    --lightBlue: #1a1a1a;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "general sans", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+
+img{
+    display: block;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+main{
+    min-height: 100vh;
+    background-color: var(--darkBlue);
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar{
+    background-color: var(--lightBlue);
+    height: 10vh;
+    width: 95%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    margin: 1vw;
+
+}
+
+.title{
+    cursor: default;
+    color: var(--beige);
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: -4px;
+}
+
+
+.mode{
+    display: flex;
+    gap: 0.5vw;
+}
+
+.mode div{
+    cursor: pointer;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+div#orangeDarkMode{
+    background-color: var(--jalebi);
+}
+div#beigeLightMode{
+    background-color: var(--beige);
+}
+
+.navbar a{
+    text-decoration: none;
+}
+.username{
+    color: var(--jalebi);
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+/* display mode hover */
+
+#orangeDarkMode:hover{ 
+    transform: scale(110%);
+    transition: all 150ms ease;
+}
+#beigeLightMode:hover{ 
+    transform: scale(110%);
+    transition: all 150ms ease;
+}
+
+
+
+/* adding lightmode */
+.lightmain{
+    background-color: var(--jalebi);
+}
+
+.lightnavbar{
+    background-color: var(--lightJalebi);
+}
+.lighttitle{
+    color: var(--lightBlue);
+}
+.lightusername{
+    color: var(--darkBlue);
+}
+
