@@ -4,6 +4,7 @@
     --jalebi: #f14f0f;
     --darkBlue: #12130f;
     --lightBlue: #1a1a1a;
+    --outlinePoster: #565656;
 
 
 }
@@ -33,7 +34,8 @@ main{
     background-color: var(--darkBlue);
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    
 }
 
 
@@ -47,6 +49,7 @@ main{
     justify-content: space-between;
     padding: 0 3vw;
     margin: 1vw;
+    margin: 2vw auto ;
 
 }
 
@@ -55,7 +58,7 @@ main{
     color: var(--beige);
     font-size: 3vw;
     font-weight: 600;
-    letter-spacing: -4px;
+    letter-spacing: -.25vw;
 }
 
 
@@ -67,8 +70,7 @@ main{
 .mode div{
     cursor: pointer;
     background-color: white;
-    height: 40px;
-    width: 40px;
+    height: 3vw;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
@@ -89,6 +91,43 @@ div#beigeLightMode{
     font-weight: 500;
 }
 
+.posters{
+    margin: 2vw 3vw;
+    display: grid;
+    grid-template-columns: repeat(5, 17%);
+    gap: 3vw 2vw;
+    justify-content: center;    
+}
+
+
+.posters div{
+    background-color: black;
+    width: 15vw;
+    aspect-ratio: .75/1;
+    border-radius: 1vw;
+    outline: 5px solid var(--outlinePoster);
+    transition: all 300ms ease;
+}
+
+.posters div:hover{
+    transform: scale(105%);
+    box-shadow: 0px 0px 18px 6px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 0px 0px 18px 6px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 18px 6px rgba(0,0,0,0.37);
+}
+
+
+
+/* adding movie posters */
+
+.posters #first{
+    background-image: url(./resources/rockstarMovie.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
 /* display mode hover */
 
 #orangeDarkMode:hover{ 
@@ -102,6 +141,7 @@ div#beigeLightMode{
 
 
 
+
 /* adding lightmode */
 .lightmain{
     background-color: var(--jalebi);
@@ -111,9 +151,8 @@ div#beigeLightMode{
     background-color: var(--lightJalebi);
 }
 .lighttitle{
-    color: var(--lightBlue);
+    color: var(--darkBlue);
 }
 .lightusername{
     color: var(--darkBlue);
 }
-
